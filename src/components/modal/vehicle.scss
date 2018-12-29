@@ -1,0 +1,12 @@
+.vehicle-list-table {
+	tbody {
+		tr {
+			td {
+				&.no-data {
+					color: #ff2e2e;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}

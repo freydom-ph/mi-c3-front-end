@@ -1,0 +1,36 @@
+.spinner-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.fa-spinner {
+		color: #fff;
+		animation: spin 3s linear infinite;
+		font-size: 5rem;
+
+		@media screen and (min-width: 1024px) {
+			font-size: 4rem;
+		}
+	}
+
+	span {
+		color: #fff;
+		font-size: 2rem;
+		margin-top: 2rem;
+
+		@media screen and (min-width: 1024px) {
+			margin-top: 1.5rem;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

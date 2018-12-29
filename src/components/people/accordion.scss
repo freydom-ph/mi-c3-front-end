@@ -1,0 +1,152 @@
+.people-list-container--accordion {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 2rem;
+
+	@media screen and (min-width: 1024px) {
+		width: 70rem;
+	}
+
+	.filter-container {
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		@media screen and (min-width: 1024px) {
+			justify-content: flex-end;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		input {
+			font-size: 3rem;
+			padding: 1rem;
+			border: none;
+			border-bottom: 2px solid #ccc;
+			margin-bottom: 2rem;
+			width: 90%;
+
+			@media screen and (min-width: 1024px) {
+				margin-right: 10px;
+				padding: 5px;
+				font-size: 1rem;
+			}
+		}
+
+		i.fa-search {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.accordion-list {
+		width: 100%;
+
+		@media screen and (min-width: 1024px) {
+			width: 60rem;
+		}
+
+		.accordion {
+			margin-bottom: 0.5rem;
+
+			.accordion-subheader,
+			.accordion-header {
+				background-color: #f7931d;
+				height: 2rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: #fff;
+				font-size: 2.5rem;
+				padding: 2rem;
+			}
+
+			.accordion-subheader {
+				background-color: #03a9f4;
+				margin-top: 2rem;
+				border: none;
+			}
+
+			.vehicle-list {
+				.vehicle-wrapper {
+					display: flex;
+					align-items: center;
+					height: 280px;
+					margin-bottom: 5px;
+
+					.counter {
+						width: 10%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: #607d8b;
+						height: 100%;
+						color: #fff;
+					}
+				}
+			}
+
+			.details {
+				flex-direction: column;
+				transition: all 0.3s linear;
+				height: 0;
+				overflow: hidden;
+
+				.detail-item {
+					display: flex;
+					padding: 1rem;
+					background-color: #eee;
+
+					&:nth-child(even) {
+						background-color: #ffe2bf;
+					}
+
+					span {
+						display: block;
+					}
+
+					.label {
+						width: 25%;
+						margin-right: 1rem;
+					}
+				}
+
+				.details-wrapper {
+					width: 90%;
+					display: flex;
+					flex-direction: column;
+				}
+
+				&--open {
+					display: flex;
+					height: auto;
+				}
+			}
+
+			i.fa-chevron-right {
+				transition: all 0.1s linear;
+
+				&.animate--down {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
+	.no-data-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5rem;
+	}
+
+	.no-data {
+		color: red;
+	}
+
+	.center {
+		text-align: center;
+	}
+}

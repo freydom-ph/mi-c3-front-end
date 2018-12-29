@@ -1,0 +1,93 @@
+.people-list-container {
+	width: 100%;
+	margin-top: 2rem;
+
+	@media screen and (min-width: 1024px) {
+		width: 70rem;
+	}
+
+	.filter-container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-bottom: 1rem;
+
+		input {
+			margin-right: 10px;
+			padding: 5px;
+			font-size: 1rem;
+			border: none;
+			border-bottom: 2px solid #ccc;
+		}
+
+		i {
+			color: #ccc;
+
+			&:hover {
+				color: #333;
+				cursor: pointer;
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+
+		.center {
+			text-align: center;
+		}
+
+		.wide {
+			width: 20%;
+		}
+
+		.narrow {
+			width: 10%;
+		}
+
+		thead {
+			tr {
+				background-color: #f7931d;
+				padding: 10px;
+
+				td {
+					padding: 10px;
+					color: #fff;
+					text-align: center;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				background-color: #eee;
+
+				&:nth-child(even) {
+					background-color: #ffe2bf;
+				}
+				td {
+					padding: 10px;
+					color: #333;
+
+					&.view-vehicles {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+
+					.button {
+						background-color: #03a9f4;
+						color: #fff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 2rem;
+						width: 5rem;
+						text-decoration: none;
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+	}
+}
